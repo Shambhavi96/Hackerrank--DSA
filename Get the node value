@@ -1,0 +1,31 @@
+/*
+  Get Nth element from the end in a linked list of integers
+  Number of elements in the list will always be greater than N.
+  Node is defined as 
+  struct Node
+  {
+     int data;
+     struct Node *next;
+  }
+*/
+
+int GetNode(Node *head,int p)
+{
+  struct Node *ptr;
+    int c=0,r=0;
+    ptr=head;
+    while(ptr!=NULL)
+    {
+        ptr=ptr->next;
+        c++;
+       
+    }
+    ptr=head;
+    
+    c=c-p;
+        
+            for(int i=0;i<c-1;i++)
+                ptr=ptr->next;
+        
+      return ptr->data;
+}
